@@ -53,6 +53,7 @@ jobs:
           terraform validate -no-color
       - name: Terraform plan
         continue-on-error: true
+        id: plan
         run: |
           terraform plan \
             -var 'project=${{ env.TF_PROJECT }}' \
