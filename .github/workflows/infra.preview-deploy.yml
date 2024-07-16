@@ -51,17 +51,17 @@ jobs:
       - name: Terraform validate
         run: |
           terraform validate -no-color
-      # - name: Terraform plan
-      #   continue-on-error: true
-      #   run: |
-      #     terraform plan \
-      #       -var 'project=${{ env.TF_PROJECT }}' \
-      #       -var 'environment=${{ env.TF_ENVIRONMENT }}' \
-      #       -var 'username=${{ secrets.MYSQL_USERNAME }}' \
-      #       -var 'password=${{ secrets.MYSQL_PASSWORD }}' \
-      #       -input=false \
-      #       -no-color \
-      #       -detailed-exitcode
+      - name: Terraform plan
+        continue-on-error: true
+        run: |
+          terraform plan \
+            -var 'project=${{ env.TF_PROJECT }}' \
+            -var 'environment=${{ env.TF_ENVIRONMENT }}' \
+            -var 'username=${{ secrets.MYSQL_USERNAME }}' \
+            -var 'password=${{ secrets.MYSQL_PASSWORD }}' \
+            -input=false \
+            -no-color \
+            -detailed-exitcode
       - name: Slack notify
         uses: slackapi/slack-github-action@v1.26.0
         with:
