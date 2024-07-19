@@ -1,4 +1,4 @@
 project     = "mw-pj"
-environment = "mwcom"
+environment = "mwenv"
 username    = "admin"
 password    = "Passw0rd"

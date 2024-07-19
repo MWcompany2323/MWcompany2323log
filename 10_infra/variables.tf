@@ -3,12 +3,12 @@
 # ---------------------------------------------
 variable "project" {
   type    = string
-  default = "tastylog"
+  default = "mw-pj"
 }
 
 variable "environment" {
   type    = string
-  default = "dev"
+  default = "mwenv"
 }
 
 variable "username" {
