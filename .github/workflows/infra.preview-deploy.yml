@@ -119,7 +119,7 @@ jobs:
       - name: Terraform apply
         id: apply
         run: |
-          terraform apply /
+          terraform apply \
             -var 'project=${{ env.TF_PROJECT }}' \
             -var 'environment=${{ env.TF_ENVIRONMENT }}' \
             -input=false \
