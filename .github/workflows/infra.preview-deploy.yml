@@ -16,8 +16,8 @@ permissions:
 env:
   AWS_REGION: ap-northeast-1
   TF_VERSION: 1.2.8
-  TF_PROJECT: mw-corporation
-  TF_ENVIRONMENT: mwcorp
+  TF_PROJECT: mwpj
+  TF_ENVIRONMENT: mwco
 
 defaults:
   run:
