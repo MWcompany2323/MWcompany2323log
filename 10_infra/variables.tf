@@ -19,5 +19,6 @@ variable "username" {
 
 variable "password" {
   type      = string
+  default   = "Passw0rd"
   sensitive = true
 }
