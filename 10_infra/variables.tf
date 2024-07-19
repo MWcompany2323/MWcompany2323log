@@ -3,7 +3,7 @@
 # ---------------------------------------------
 variable "project" {
   type    = string
-  default = "mw-pj"
+  default = "mwpj"
 }
 
 variable "environment" {
